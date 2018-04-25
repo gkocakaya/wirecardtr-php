@@ -91,6 +91,7 @@
     $request->Token= new Token();
     $request->Token->UserCode=$settings->UserCode;
     $request->Token->Pin=$settings->Pin;
+    $request->BaseUrl = $settings->BaseUrl;
 
     $request->ContactInfo= new ContactInfo();
     $request->ContactInfo->Country="TR";

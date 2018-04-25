@@ -50,8 +50,9 @@
      $request->OperationType = "ReleasePayment";
 
      $request->Token= new Token();
-    $request->Token->UserCode=$settings->UserCode;
-    $request->Token->Pin=$settings->Pin;
+     $request->Token->UserCode=$settings->UserCode;
+     $request->Token->Pin=$settings->Pin;
+     $request->BaseUrl = $settings->BaseUrl;
     
      $request->MPAY = "";
      $request->CommissionRate = 100;//%1

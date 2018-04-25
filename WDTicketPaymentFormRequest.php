@@ -20,10 +20,11 @@ class WDTicketPaymentFormRequest
     public  $ExtraParam; 
     public  $PaymentContent; 
     public  $PaymentTypeId; 
+    public  $BaseUrl;
 
     public static function Execute(WDTicketPaymentFormRequest $request)
     {
-        return  restHttpCaller::post("https://www.wirecard.com.tr/SGate/Gate" , $request->toXmlString());
+        return  restHttpCaller::post($request->BaseUrl, $request->toXmlString());
     }    
     
     //İstek sonucunda oluşan çıktının xml olarak gösterilmesini sağlar.

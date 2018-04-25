@@ -16,10 +16,11 @@ class MarketPlaceSaleReleasePaymentRequest
     public  $CommissionRate; 
     public  $OrderId; 
     public  $Description;
+    public  $BaseUrl;
 
     public static function Execute(MarketPlaceSaleReleasePaymentRequest $request)
     {
-        return  restHttpCaller::post("https://www.wirecard.com.tr/SGate/Gate" , $request->toXmlString());
+        return  restHttpCaller::post($request->BaseUrl, $request->toXmlString());
     }    
     
     //Post edilmesi istenen xml metni oluşturulup bu xml metni belirtilen adrese post edilir.

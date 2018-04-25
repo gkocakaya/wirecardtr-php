@@ -15,6 +15,7 @@ class Product
     public $Price; 
     public $Unit;    
 }
+
 class Input
 {
     public $Content; 
@@ -59,28 +60,31 @@ class CreditCardInfo
     public $Cvv;
     public $Price;
 }
- class FinancialInfo
- {
-    public $IdentityNumber ; 
-    public $TaxOffice ; 
-    public $TaxNumber ; 
-    public $BankName ; 
-    public $IBAN ; 
-    public $AccountName ; 
- }
- class ContactInfo
- {
-    public $Country ; 
-    public $City ; 
-    public $Address ; 
-    public $BankName ; 
-    public $BusinessPhone ; 
-    public $MobilePhone ; 
- }
- class CardTokenization
- {
-    public $RequestType ;
-    public $CustomerId ;
-    public $ValidityPeriod ;
-    public $CCTokenId ;
- }
+
+class FinancialInfo
+{
+    public $IdentityNumber; 
+    public $TaxOffice;
+    public $TaxNumber;
+    public $BankName;
+    public $IBAN;
+    public $AccountName;
+}
+
+class ContactInfo
+{
+    public $Country;
+    public $City;
+    public $Address;
+    public $BankName;
+    public $BusinessPhone;
+    public $MobilePhone;
+}
+
+class CardTokenization
+{
+    public $RequestType;
+    public $CustomerId;
+    public $ValidityPeriod;
+    public $CCTokenId;
+}

@@ -16,11 +16,12 @@ class MarketPlaceAddOrUpdateRequest
     public  $Name; 
     public  $ContactInfo; 
     public  $FinancialInfo; 
-    public  $SubPartnerId; 
+    public  $SubPartnerId;
+    public  $BaseUrl;
 
     public static function Execute(MarketPlaceAddOrUpdateRequest $request)
     {
-        return  restHttpCaller::post("https://www.wirecard.com.tr/SGate/Gate" , $request->toXmlString());
+        return  restHttpCaller::post($request->BaseUrl, $request->toXmlString());
     }    
     
     //Post edilmesi istenen xml metni oluşturulup bu xml metni belirtilen adrese post edilir.
