@@ -87,6 +87,7 @@
     $request->Token= new Token();
     $request->Token->UserCode=$settings->UserCode;
     $request->Token->Pin=$settings->Pin;
+    $request->BaseUrl = $settings->BaseUrl;
     $request->ErrorURL = "http://localhost:5000/fail.php";
     $request->SuccessURL = "http://localhost:5000/success.php";
     $request->MPAY = "";

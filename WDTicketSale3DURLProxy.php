@@ -75,6 +75,7 @@ include('menu.php');
     $request->Token= new Token();
     $request->Token->UserCode=$settings->UserCode;
     $request->Token->Pin=$settings->Pin;
+    $request->BaseUrl = $settings->BaseUrl;
 
     $request->Price = 1;
     $request->MPAY = "";

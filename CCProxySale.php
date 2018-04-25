@@ -87,6 +87,7 @@
     $request->Token= new Token();
     $request->Token->UserCode=$settings->UserCode;
     $request->Token->Pin=$settings->Pin;
+    $request->BaseUrl = $settings->BaseUrl;
     
     $request->MPAY = "";
     $request->Port = "123";

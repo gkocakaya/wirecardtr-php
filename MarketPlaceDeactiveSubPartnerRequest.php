@@ -11,10 +11,11 @@ class MarketPlaceDeactiveRequest
     public  $OperationType; 
     public  $Token; 
     public  $UniqueId; 
+    public  $BaseUrl;
 
     public static function Execute(MarketPlaceDeactiveRequest $request)
     {
-        return  restHttpCaller::post("https://www.wirecard.com.tr/SGate/Gate" , $request->toXmlString());
+        return  restHttpCaller::post($request->BaseUrl , $request->toXmlString());
     }    
     
     //Post edilmesi istenen xml metni oluşturulup bu xml metni belirtilen adrese post edilir.
