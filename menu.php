@@ -14,6 +14,11 @@ include ('MarketPlaceSale3DSecOrMpSaleRequest.php');
 include ('MarketPlaceReleasePaymentRequest.php');
 include ('MarketPlaceMpSaleRequest.php');
 include ('CCProxySale3DSecureRequest.php');
+include ('MarketPlaceMPSale3DSECRequest.php');
+include('SubscriberChangePriceRequest.php');
+include('TokenizeCCURLRequest.php');
+include('TokenizeCCRequest.php');
+
 ?>
 
 <html>
@@ -51,6 +56,7 @@ include ('CCProxySale3DSecureRequest.php');
                 <li><a href="SelectSubscriber.php">Abonelik Listeleme</a></li>
                 <li><a href="SelectSubscriberDetail.php">Abonelik Detay</a></li>
                 <li><a href="DeactivateSubscriber.php">Abone Sil</a></li>
+                <li><a href="SubscriberChangePrice.php">Abonelik Ücret Değişimi</a></li>
             </ul>
         </li>
         <li>
@@ -80,7 +86,17 @@ include ('CCProxySale3DSecureRequest.php');
                 <li><a href="MarketPlaceDeactiveSubPartner.php">Mağaza Sil</a></li>
                 <li><a href="MarketPlaceSale3DSec.php">3D Secure ile Ödeme </a></li>
                 <li><a href="MarketPlaceMPSale.php">3D Secure olmadan Ödeme </a></li>
+                <li><a href="MarketPlaceWDTicketMpSale3dSecWithUrl.php">Wirecard Ortak Ödeme Sayfası </a></li>
+                
                 <li><a href="MarketPlaceReleasePayment.php">Ödeme Onay Servisi </a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#CardTokenization" data-toggle="collapse" aria-expanded="false">Kart Saklama</a>
+            <ul class="collapse list-unstyled" id="CardTokenization">
+                <li><a href="TokenizeCCURL.php">Url Yöntemi ile kart saklama</a></li>
+                <a href="TokenizeCC.php">Direk Kart Sakla</a>
+               
             </ul>
         </li>
         <li>

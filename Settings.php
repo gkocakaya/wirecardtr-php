@@ -51,6 +51,6 @@ class Settings
      * Test ortamında işlem yapıyorsanız, bu değişkenin değeri Test olmalıdır.
      * Canlı ortamda işlem yapıyorsanız, bu değişkenin değeri Production olmalıdır.
      */
-    public $Environment = 'Test';
+    public $Environment = 'Production';
     
 }

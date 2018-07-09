@@ -51,6 +51,18 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="col-md-4 control-label" for="">Mağazaya veya mağaza yetkilisine ait EPosta adresi</label>
+            <div class="col-md-4">
+                <input name="emailAddress" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="">Faturanın gönderileceği EPosta Adresi</label>
+            <div class="col-md-4">
+                <input name="invoiceEMailAddress" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-md-4 control-label" for="">Mağaza sahibine veya yetkilisine ait TC kimlik numarası</label>
             <div class="col-md-4">
                 <input name="identityNumber" class="form-control input-md" required="">
@@ -89,12 +101,13 @@
     $request->UniqueId = Helper::Guid ();
     $request->SubPartnerType = $_POST["subPartnerType"]; 
     $request->Name = $_POST["name"];  
+    $request->BranchName= $_POST["name"]; 
     $request->SubPartnerId = $_POST["subPartnerId"];  
 
     $request->Token= new Token();
     $request->Token->UserCode=$settings->UserCode;
     $request->Token->Pin=$settings->Pin;
-    $request->BaseUrl = $setings->BaseUrl;
+    $request->BaseUrl = $settings->BaseUrl;
     
     $request->ContactInfo= new ContactInfo();
     $request->ContactInfo->Country="TR";
@@ -102,6 +115,8 @@
     $request->ContactInfo->Address= "Gayrettepe Mh. Yıldız Posta Cd. D Plaza No:52 K:6 34349 Beşiktaş / İstanbul";
     $request->ContactInfo->BusinessPhone="2121111111";
     $request->ContactInfo->MobilePhone=$_POST["mobilePhoneNumber"];
+    $request->ContactInfo->Email=$_POST["emailAddress"];
+    $request->ContactInfo->InvoiceEmail=$_POST["invoiceEMailAddress"];
 
     $request->FinancialInfo= new FinancialInfo();
     $request->FinancialInfo->IdentityNumber=$_POST["identityNumber"];
@@ -109,7 +124,6 @@
     $request->FinancialInfo->TaxNumber= "11111111111";
     $request->FinancialInfo->BankName= "0012";
     $request->FinancialInfo->IBAN= "TR330006100519786457841326";
-    $request->FinancialInfo->AccountName= "Fatih Coşkun";
 
     $response = MarketPlaceAddOrUpdateRequest::execute($request); // Market Place update servisi başlatılması için gerekli servis çağırısını temsil eder.
     print "<h3>Sonuç:</h3>";
