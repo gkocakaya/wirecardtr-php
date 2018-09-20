@@ -110,7 +110,7 @@
     $request->CardTokenization->RequestType="0";
     $request->CardTokenization->CustomerId="01";
     $request->CardTokenization->ValidityPeriod="0";
-    $request->CardTokenization->CCTokenId=Helper::Guid ();
+    $request->CardTokenization->CCTokenId="";
 
     $response = CCProxySale3DSecureRequest::execute($request); // CCProxySale3dSecure servisi başlatılması için gerekli servis çağırısını temsil eder.
     print "<h3>Sonuç:</h3>";
