@@ -41,22 +41,22 @@ class MarketPlaceSale3DOrMpSaleRequest
         "    <ServiceType>" . $this->ServiceType . "</ServiceType>\n" .
         "    <OperationType>" . $this->OperationType . "</OperationType>\n" .
         "    <Token>\n" .
-        "    <UserCode>" .urlencode($this->Token->UserCode) . "</UserCode>\n" .
-        "    <Pin>" .urlencode($this->Token->Pin) . "</Pin>\n" .
+        "    <UserCode>" .$this->Token->UserCode . "</UserCode>\n" .
+        "    <Pin>" .$this->Token->Pin . "</Pin>\n" .
         "    </Token>\n" .
         "    <CreditCardInfo>\n" .
-        "        <CreditCardNo>" . urlencode($this->CreditCardInfo->CreditCardNo) . "</CreditCardNo>\n" .
-        "        <OwnerName>" . urlencode($this->CreditCardInfo->OwnerName) . "</OwnerName>\n" .
-        "        <ExpireYear>" . urlencode($this->CreditCardInfo->ExpireYear) . "</ExpireYear>\n" .
-        "        <ExpireMonth>" . urlencode($this->CreditCardInfo->ExpireMonth) . "</ExpireMonth>\n" .
-        "        <Cvv>" . urlencode($this->CreditCardInfo->Cvv) . "</Cvv>\n" .
-        "        <Price>" . urlencode($this->CreditCardInfo->Price) . "</Price>\n" .
+        "        <CreditCardNo>" . $this->CreditCardInfo->CreditCardNo . "</CreditCardNo>\n" .
+        "        <OwnerName>" . $this->CreditCardInfo->OwnerName . "</OwnerName>\n" .
+        "        <ExpireYear>" . $this->CreditCardInfo->ExpireYear . "</ExpireYear>\n" .
+        "        <ExpireMonth>" . $this->CreditCardInfo->ExpireMonth . "</ExpireMonth>\n" .
+        "        <Cvv>" . $this->CreditCardInfo->Cvv . "</Cvv>\n" .
+        "        <Price>" . $this->CreditCardInfo->Price . "</Price>\n" .
         "    </CreditCardInfo>\n" .
         "    <CardTokenization>\n" .
-        "        <RequestType>" . urlencode($this->CardTokenization->RequestType) . "</RequestType>\n" .
-        "        <CustomerId>" . urlencode($this->CardTokenization->CustomerId) . "</CustomerId>\n" .
-        "        <ValidityPeriod>" . urlencode($this->CardTokenization->ValidityPeriod) . "</ValidityPeriod>\n" .
-        "        <CCTokenId>" . urlencode($this->CardTokenization->CCTokenId) . "</CCTokenId>\n" .
+        "        <RequestType>" . $this->CardTokenization->RequestType . "</RequestType>\n" .
+        "        <CustomerId>" . $this->CardTokenization->CustomerId . "</CustomerId>\n" .
+        "        <ValidityPeriod>" . $this->CardTokenization->ValidityPeriod . "</ValidityPeriod>\n" .
+        "        <CCTokenId>" . $this->CardTokenization->CCTokenId . "</CCTokenId>\n" .
         "    </CardTokenization>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
         "    <ExtraParam>" . $this->ExtraParam . "</ExtraParam>\n" .
@@ -71,6 +71,7 @@ class MarketPlaceSale3DOrMpSaleRequest
         "    <SubPartnerId>" . $this->SubPartnerId . "</SubPartnerId>\n" .
         "    <PaymentContent>" . $this->PaymentContent . "</PaymentContent>\n" .
         "</WIRECARD>";
+        $xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
          return $xml_data;
     }
 }

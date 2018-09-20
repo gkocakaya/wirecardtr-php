@@ -35,8 +35,8 @@ class WDTicketPaymentFormRequest
         "    <ServiceType>" . $this->ServiceType . "</ServiceType>\n" .
         "    <OperationType>" . $this->OperationType . "</OperationType>\n" .
         "    <Token>\n" .
-        "    <UserCode>" .urlencode($this->Token->UserCode) . "</UserCode>\n" .
-        "    <Pin>" .urlencode($this->Token->Pin) . "</Pin>\n" .
+        "    <UserCode>" .$this->Token->UserCode . "</UserCode>\n" .
+        "    <Pin>" .$this->Token->Pin . "</Pin>\n" .
         "    </Token>\n" .
         "    <Price>" . $this->Price . "</Price>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
@@ -47,6 +47,7 @@ class WDTicketPaymentFormRequest
         "    <PaymentContent>" . $this->PaymentContent . "</PaymentContent>\n" .
         "    <PaymentTypeId>" . $this->PaymentTypeId . "</PaymentTypeId>\n" .
         "</WIRECARD>";
+        $xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
          return $xml_data;
     }
 }

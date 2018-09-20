@@ -33,8 +33,8 @@ class MarketPlaceAddOrUpdateRequest
         "    <ServiceType>" . $this->ServiceType . "</ServiceType>\n" .
         "    <OperationType>" . $this->OperationType . "</OperationType>\n" .
         "    <Token>\n" .
-                "    <UserCode>" .urlencode($this->Token->UserCode) . "</UserCode>\n" .
-                "    <Pin>" .urlencode($this->Token->Pin) . "</Pin>\n" .
+                "    <UserCode>" .$this->Token->UserCode . "</UserCode>\n" .
+                "    <Pin>" .$this->Token->Pin . "</Pin>\n" .
         "    </Token>\n" .
         "    <UniqueId>" . $this->UniqueId . "</UniqueId>\n" .
         "    <SubPartnerId>" . $this->SubPartnerId . "</SubPartnerId>\n" .
@@ -42,22 +42,23 @@ class MarketPlaceAddOrUpdateRequest
         "    <Name>" . $this->Name . "</Name>\n" .
         "    <BranchName>" . $this->BranchName . "</BranchName>\n" .
         "    <ContactInfo>\n" .
-        "        <Country>" . urlencode($this->ContactInfo->Country) . "</Country>\n" .
-        "        <City>" . urlencode($this->ContactInfo->City) . "</City>\n" .
-        "        <Address>" . urlencode($this->ContactInfo->Address) . "</Address>\n" .
-        "        <BusinessPhone>" . urlencode($this->ContactInfo->BusinessPhone) . "</BusinessPhone>\n" .
-        "        <MobilePhone>" . urlencode($this->ContactInfo->MobilePhone) . "</MobilePhone>\n" .
+        "        <Country>" . $this->ContactInfo->Country . "</Country>\n" .
+        "        <City>" . $this->ContactInfo->City . "</City>\n" .
+        "        <Address>" . $this->ContactInfo->Address . "</Address>\n" .
+        "        <BusinessPhone>" . $this->ContactInfo->BusinessPhone . "</BusinessPhone>\n" .
+        "        <MobilePhone>" . $this->ContactInfo->MobilePhone . "</MobilePhone>\n" .
         "        <Email>" . $this->ContactInfo->Email . "</Email>\n" .
         "        <InvoiceEmail>" . $this->ContactInfo->InvoiceEmail . "</InvoiceEmail>\n" .
         "    </ContactInfo>\n" .
         "    <FinancialInfo>\n" .
-        "        <IdentityNumber>" . urlencode($this->FinancialInfo->IdentityNumber) . "</IdentityNumber>\n" .
-        "        <TaxOffice>" . urlencode($this->FinancialInfo->TaxOffice) . "</TaxOffice>\n" .
-        "        <TaxNumber>" . urlencode($this->FinancialInfo->TaxNumber) . "</TaxNumber>\n" .
-        "        <BankName>" . urlencode($this->FinancialInfo->BankName) . "</BankName>\n" .
-        "        <IBAN>" . urlencode($this->FinancialInfo->IBAN) . "</IBAN>\n" .
+        "        <IdentityNumber>" . $this->FinancialInfo->IdentityNumber . "</IdentityNumber>\n" .
+        "        <TaxOffice>" . $this->FinancialInfo->TaxOffice . "</TaxOffice>\n" .
+        "        <TaxNumber>" . $this->FinancialInfo->TaxNumber . "</TaxNumber>\n" .
+        "        <BankName>" . $this->FinancialInfo->BankName . "</BankName>\n" .
+        "        <IBAN>" . $this->FinancialInfo->IBAN . "</IBAN>\n" .
         "    </FinancialInfo>\n" .
         "</WIRECARD>";
+        $xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
          return $xml_data;
         
     }

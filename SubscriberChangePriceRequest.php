@@ -31,15 +31,15 @@ class SubscriberChangePriceRequest
         "    <ServiceType>" . $this->ServiceType . "</ServiceType>\n" .
         "    <OperationType>" . $this->OperationType . "</OperationType>\n" .
         "    <Token>\n" .
-        "    <UserCode>" .urlencode($this->Token->UserCode) . "</UserCode>\n" .
-        "    <Pin>" .urlencode($this->Token->Pin) . "</Pin>\n" .
+        "    <UserCode>" .$this->Token->UserCode . "</UserCode>\n" .
+        "    <Pin>" .$this->Token->Pin . "</Pin>\n" .
         "    </Token>\n" .
         "    <Price>" . $this->Price . "</Price>\n" .
         "    <ValidFrom>" . $this->ValidFrom . "</ValidFrom>\n" .
         "    <SubscriberId>" . $this->SubscriberId . "</SubscriberId>\n" .
         "    <Description>" . $this->Description . "</Description>\n" .
         "</WIRECARD>";
-        echo($xml_data);
+        $xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
          return $xml_data;
        
     }

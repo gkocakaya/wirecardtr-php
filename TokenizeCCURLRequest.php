@@ -33,8 +33,8 @@ class TokenizeCCURLRequest
         "    <ServiceType>" . $this->ServiceType . "</ServiceType>\n" .
         "    <OperationType>" . $this->OperationType . "</OperationType>\n" .
         "    <Token>\n" .
-        "    <UserCode>" .urlencode($this->Token->UserCode) . "</UserCode>\n" .
-        "    <Pin>" .urlencode($this->Token->Pin) . "</Pin>\n" .
+        "    <UserCode>" . $this->Token->UserCode . "</UserCode>\n" .
+        "    <Pin>" . $this->Token->Pin . "</Pin>\n" .
         "    </Token>\n" .
         "    <CustomerId>" . $this->CustomerId . "</CustomerId>\n" . 
         "    <ValidityPeriod>" . $this->ValidityPeriod . "</ValidityPeriod>\n" . 
@@ -42,7 +42,7 @@ class TokenizeCCURLRequest
         "    <ErrorURL>" . $this->ErrorURL . "</ErrorURL>\n" . 
         "    <SuccessURL>" . $this->SuccessURL . "</SuccessURL>\n" . 
         "</WIRECARD>";
-
+        $xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
          return $xml_data;
     }
 }
