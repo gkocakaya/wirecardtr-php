@@ -12,6 +12,7 @@ class CCProxySale3DSecureRequest
     public  $Token; 
     public  $CreditCardInfo; 
     public  $MPAY; 
+    public  $CurrencyCode; 
     public  $Port; 
     public  $ErrorURL; 
     public  $SuccessURL; 
@@ -53,6 +54,7 @@ class CCProxySale3DSecureRequest
         "        <CCTokenId>" . $this->CardTokenization->CCTokenId . "</CCTokenId>\n" .
         "    </CardTokenization>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
+        "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
         "    <Port>" . $this->Port . "</Port>\n" . 
         "    <ErrorURL>" . $this->ErrorURL . "</ErrorURL>\n" . 
         "    <SuccessURL>" . $this->SuccessURL . "</SuccessURL>\n" . 

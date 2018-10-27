@@ -12,6 +12,7 @@ class CCProxySaleRequest
     public  $Token; 
     public  $CreditCardInfo; 
     public  $MPAY; 
+    public  $CurrencyCode;
     public  $IPAddress; 
     public  $PaymentContent; 
     public  $InstallmentCount; 
@@ -51,6 +52,7 @@ class CCProxySaleRequest
         "        <CCTokenId>" . $this->CardTokenization->CCTokenId . "</CCTokenId>\n" .
         "    </CardTokenization>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
+        "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
         "    <IPAddress>" . $this->IPAddress . "</IPAddress>\n" .
         "    <PaymentContent>" . $this->PaymentContent . "</PaymentContent>\n" .
         "    <InstallmentCount>" . $this->InstallmentCount . "</InstallmentCount>\n" .

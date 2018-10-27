@@ -14,6 +14,7 @@ class WDTicketPaymentFormRequest
     public  $Price; 
     public  $Token; 
     public  $MPAY; 
+    public  $CurrencyCode; 
     public  $Description; 
     public  $ErrorURL; 
     public  $SuccessURL; 
@@ -40,6 +41,7 @@ class WDTicketPaymentFormRequest
         "    </Token>\n" .
         "    <Price>" . $this->Price . "</Price>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
+        "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
         "    <Description>" . $this->Description . "</Description>\n" .
         "    <ErrorURL>" . $this->ErrorURL . "</ErrorURL>\n" .
         "    <SuccessURL>" . $this->SuccessURL . "</SuccessURL>\n" .

@@ -27,7 +27,16 @@
                 <input value="" name="subPartnerId" class="form-control input-md">
             </div>
         </div>
-      
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="">  Para Birimi: </label>
+            <div class="col-md-4">
+                <select name="currencyCode">
+                    <option value="TRY">TRY</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+        </div>
     </fieldset>
     <!-- Button -->
     <div class="form-group">
@@ -57,11 +66,12 @@
     $request->BaseUrl = $settings->BaseUrl;
 
     $request->MPAY = "";
+    $request->CurrencyCode =$_POST["currencyCode"];
     $request->PaymentContent = "Bilgisayar";
     $request->Description = "BLGSYR01";
     $request->ExtraParam = "";
-    $request->ErrorURL = "http://wirecardphp.codevist.com/fail.php";
-    $request->SuccessURL = "http://wirecardphp.codevist.com/success.php";
+    $request->ErrorURL = "http://localhost:5000/fail.php";
+    $request->SuccessURL = "http://localhost:5000/success.php";
     $request->CommissionRate = 100;//%1
     $request->Price=1;////0,01 TL
     $request->SubPartnerId = $_POST["subPartnerId"];

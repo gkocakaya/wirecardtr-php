@@ -13,6 +13,7 @@ class MarketPlaceSale3DOrMpSaleRequest
     public  $OperationType; 
     public  $CreditCardInfo; 
     public  $MPAY;
+    public  $CurrencyCode;
     public  $Token;
     public  $ExtraParam; 
     public  $Description;
@@ -59,6 +60,7 @@ class MarketPlaceSale3DOrMpSaleRequest
         "        <CCTokenId>" . $this->CardTokenization->CCTokenId . "</CCTokenId>\n" .
         "    </CardTokenization>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
+        "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
         "    <ExtraParam>" . $this->ExtraParam . "</ExtraParam>\n" .
         "    <Description>" . $this->Description . "</Description>\n" .
         "    <IPAddress>" . $this->IPAddress . "</IPAddress>\n" . 

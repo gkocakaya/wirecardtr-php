@@ -67,6 +67,16 @@
                 </select>
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="">  Para Birimi: </label>
+            <div class="col-md-4">
+                <select name="currencyCode">
+                    <option value="TRY">TRY</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+        </div>
     </fieldset>
     <!-- Button -->
     <div class="form-group">
@@ -96,6 +106,7 @@
     $request->BaseUrl = $settings->BaseUrl;
     $request->Price="1";//0.01 TL
     $request->MPAY = "01";
+    $request->CurrencyCode =$_POST["currencyCode"];
     $request->IPAddress = helper::get_client_ip();  
     $request->PaymentContent = "Bilgisayar";
     $request->InstallmentCount = $_POST["installmentCount"];
@@ -116,7 +127,7 @@
     $request->CardTokenization->RequestType="0";
     $request->CardTokenization->CustomerId="01";
     $request->CardTokenization->ValidityPeriod="0";
-    $request->CardTokenization->CCTokenId=Helper::Guid ();
+    $request->CardTokenization->CCTokenId="";
     
     $response = MarketPlaceMpSaleRequest::execute($request); // Market Place 3D Secure olmadan ödeme servisi başlatılması için gerekli servis çağırısını temsil eder.
     print "<h3>Sonuç:</h3>";

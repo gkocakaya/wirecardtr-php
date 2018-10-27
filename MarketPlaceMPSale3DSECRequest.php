@@ -12,6 +12,7 @@ class MarketPlaceMPSale3DSECRequest
     public  $ServiceType; 
     public  $OperationType; 
     public  $MPAY;
+    public  $CurrencyCode;
     public  $Token;
     public  $ExtraParam; 
     public  $Description;
@@ -41,6 +42,7 @@ class MarketPlaceMPSale3DSECRequest
         "    <Pin>" . $this->Token->Pin . "</Pin>\n" .
         "    </Token>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
+        "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
         "    <ExtraParam>" . $this->ExtraParam . "</ExtraParam>\n" .
         "    <Description>" . $this->Description . "</Description>\n" .
         "    <ErrorURL>" . $this->ErrorURL . "</ErrorURL>\n" . 

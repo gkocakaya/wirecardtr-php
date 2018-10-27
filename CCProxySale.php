@@ -63,6 +63,16 @@
                 </select>
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="">  Para Birimi: </label>
+            <div class="col-md-4">
+                <select name="currencyCode">
+                    <option value="TRY">TRY</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+        </div>
     </fieldset>
     <!-- Button -->
     <div class="form-group">
@@ -90,6 +100,7 @@
     $request->BaseUrl = $settings->BaseUrl;
     
     $request->MPAY = "";
+    $request->CurrencyCode =$_POST["currencyCode"];
     $request->Port = "123";
     $request->IPAddress = helper::get_client_ip();  
     $request->PaymentContent = "Bilgisayar";

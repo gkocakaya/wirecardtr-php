@@ -23,6 +23,9 @@ include('menu.php');
                     İşlem Tutarı
                 </th>
                 <th>
+                   Para Birimi
+                </th>
+                <th>
                     İşlem Tipi
                 </th>
             </tr>
@@ -37,6 +40,9 @@ include('menu.php');
                 </td>
                 <td>
                    0,01 TL
+                </td>
+                <td>
+                TRY/USD/EUR --> TRY
                 </td>
                 <td>
                   1 //Tek Çekim
@@ -78,6 +84,7 @@ include('menu.php');
     
     $request->Price = 1; //0.01 TL
     $request->MPAY = "";
+    $request->CurrencyCode ="TRY";
     $request->ErrorURL = "http://localhost:5000/fail.php";
     $request->SuccessURL = "http://localhost:5000/success.php";
     $request->ExtraParam = "";
