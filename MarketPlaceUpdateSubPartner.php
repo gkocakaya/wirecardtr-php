@@ -17,6 +17,9 @@
     <label style="font-weight:bold;">Mağaza Ülkesi: &nbsp; : &nbsp;</label>TR<br>
     <label style="font-weight:bold;">Mağaza Şehri: &nbsp;</label>&nbsp; 34<br>
     <label style="font-weight:bold;">Mağaza Açık Adresi &nbsp;: &nbsp;</label>Gayrettepe Mh. Yıldız Posta Cd. D Plaza No:52 K:6 34349 Beşiktaş / İstanbul<br>
+	<label style="font-weight:bold;">İmza Yetkilisi Adı &nbsp;: &nbsp; </label>Ahmet<br>
+    <label style="font-weight:bold;">İmza Yetkilisi Soyadı &nbsp;: &nbsp;</label>Yılmaz<br>
+    <label style="font-weight:bold;">İmza Yetkilisi Doğum Tarihi &nbsp;: &nbsp;</label>1970/10/29<br>
 </fieldset>
 
 <br />
@@ -125,6 +128,11 @@
     $request->FinancialInfo->BankName= "0012";
     $request->FinancialInfo->IBAN= "TR330006100519786457841326";
 
+	$request->AuthSignatoryName="Ahmet";
+	$request->AuthSignatorySurname="Yılmaz";
+	$request->AuthSignatoryBirthDate=date("Y/m/d");
+	
+	
     $response = MarketPlaceAddOrUpdateRequest::execute($request); // Market Place update servisi başlatılması için gerekli servis çağırısını temsil eder.
     print "<h3>Sonuç:</h3>";
 	echo "<pre>";

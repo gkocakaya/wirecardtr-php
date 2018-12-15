@@ -19,6 +19,9 @@ class MarketPlaceAddOrUpdateRequest
     public  $FinancialInfo; 
     public  $SubPartnerId;
     public  $BaseUrl;
+	public	$AuthSignatoryName;
+	public	$AuthSignatorySurname;
+	public	$AuthSignatoryBirthDate;
 
     public static function Execute(MarketPlaceAddOrUpdateRequest $request)
     {
@@ -57,6 +60,11 @@ class MarketPlaceAddOrUpdateRequest
         "        <BankName>" . $this->FinancialInfo->BankName . "</BankName>\n" .
         "        <IBAN>" . $this->FinancialInfo->IBAN . "</IBAN>\n" .
         "    </FinancialInfo>\n" .
+		"    <AuthSignatory>\n" .
+        "        <Name>" . $this->AuthSignatoryName . "</Name>\n" .
+        "        <Surname>" . $this->AuthSignatorySurname . "</Surname>\n" .
+        "        <BirthDate>" . $this->AuthSignatoryBirthDate . "</BirthDate>\n" .
+        "    </AuthSignatory>\n" .
         "</WIRECARD>";
         $xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
          return $xml_data;
