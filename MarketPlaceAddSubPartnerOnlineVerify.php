@@ -1,5 +1,5 @@
 <?php include('menu.php');?>
-<h2>Pazaryeri Oluşturma (Belge İle Doğrulama)</h2>
+<h2>Pazaryeri Oluşturma (Online Doğrulama)</h2>
 <fieldset>
     <legend><label style="font-weight:bold;width:250px;">MarketPlace Bilgileri</label></legend>
     <label style="font-weight:bold;">Servis Adı &nbsp; :   &nbsp; </label> CCMarketPlace<br>
@@ -123,6 +123,8 @@
     $request->FinancialInfo->TaxNumber= "11111111111";
     $request->FinancialInfo->BankName= "0012";
     $request->FinancialInfo->IBAN= "TR330006100519786457841326";
+	$request->FinancialInfo->TradeRegisterNumber = "963018";
+    $request->FinancialInfo->TradeChamber = "İTO";
 
 	$request->AuthSignatoryName="Ahmet";
 	$request->AuthSignatorySurname="Yılmaz";

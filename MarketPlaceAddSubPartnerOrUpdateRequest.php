@@ -59,6 +59,8 @@ class MarketPlaceAddOrUpdateRequest
         "        <TaxNumber>" . $this->FinancialInfo->TaxNumber . "</TaxNumber>\n" .
         "        <BankName>" . $this->FinancialInfo->BankName . "</BankName>\n" .
         "        <IBAN>" . $this->FinancialInfo->IBAN . "</IBAN>\n" .
+		"        <TradeRegisterNumber>" . $this->FinancialInfo->TradeRegisterNumber . "</TradeRegisterNumber>\n" .
+		"        <TradeChamber>" . $this->FinancialInfo->TradeChamber . "</TradeChamber>\n" .
         "    </FinancialInfo>\n" .
 		"    <AuthSignatory>\n" .
         "        <Name>" . $this->AuthSignatoryName . "</Name>\n" .

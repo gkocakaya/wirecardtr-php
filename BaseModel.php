@@ -69,6 +69,8 @@ class FinancialInfo
     public $BankName;
     public $IBAN;
     public $AccountName;
+	public $TradeRegisterNumber;
+    public $TradeChamber;
 }
 
 class ContactInfo

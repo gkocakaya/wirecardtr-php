@@ -81,8 +81,10 @@ include('TokenizeCCRequest.php');
         <li>
             <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false">Mağaza Servisleri</a>
             <ul class="collapse list-unstyled" id="pageSubmenu3">
-                <li><a href="MarketPlaceAddSubPartner.php">Mağaza Oluştur</a></li>
-                <li><a href="MarketPlaceUpdateSubPartner.php">Mağaza Güncelle</a></li>
+                <li><a href="MarketPlaceAddSubPartner.php">Mağaza Oluştur (Belge İle Doğrulama)</a></li>
+                <li><a href="MarketPlaceUpdateSubPartner.php">Mağaza Güncelle (Belge İle Doğrulama)</a></li>
+				<li><a href="MarketPlaceAddSubPartnerOnlineVerify.php">Mağaza Oluştur (Online Doğrulama)</a></li>
+                <li><a href="MarketPlaceUpdateSubPartnerOnlineVerify.php">Mağaza Güncelle (Online Doğrulama)</a></li>
                 <li><a href="MarketPlaceDeactiveSubPartner.php">Mağaza Sil</a></li>
                 <li><a href="MarketPlaceSale3DSec.php">3D Secure ile Ödeme </a></li>
                 <li><a href="MarketPlaceMPSale.php">3D Secure olmadan Ödeme </a></li>
