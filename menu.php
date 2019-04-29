@@ -106,6 +106,7 @@ include('TokenizeCCRequest.php');
             <ul class="collapse list-unstyled" id="transactionQuery">
                 <li><a href="TransactionQueryOrder.php">Sipariş Numarası ile İşlem Sorgulama</a></li>
                 <li><a href="TransactionQueryMPay.php">MPAY ile İşlem Sorgulama</a></li>
+                <li><a href="BinQuery.php">BIN Sorgulama</a></li>
             </ul>
         </li>
             </ul>  
