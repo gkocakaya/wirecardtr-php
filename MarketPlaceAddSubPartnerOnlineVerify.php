@@ -102,6 +102,9 @@
     $request->SubPartnerType = $_POST["subPartnerType"]; 
     $request->Name = $_POST["name"];  
     $request->BranchName= $_POST["name"]; 
+	
+	$request->SuccessURL= "https://www.test.com/Success";
+	$request->ErrorURL= "https://www.test.com/Error";
 
     $request->Token= new Token();
     $request->Token->UserCode=$settings->UserCode;

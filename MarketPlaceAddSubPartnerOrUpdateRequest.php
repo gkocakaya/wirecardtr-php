@@ -14,7 +14,9 @@ class MarketPlaceAddOrUpdateRequest
     public  $UniqueId; 
     public  $SubPartnerType; 
     public  $Name; 
-    public  $BranchName; 
+    public  $BranchName;
+	public  $SuccessURL; 
+	public  $ErrorURL; 	
     public  $ContactInfo; 
     public  $FinancialInfo; 
     public  $SubPartnerId;
@@ -44,6 +46,8 @@ class MarketPlaceAddOrUpdateRequest
         "    <SubPartnerType>" . $this->SubPartnerType . "</SubPartnerType>\n" .
         "    <Name>" . $this->Name . "</Name>\n" .
         "    <BranchName>" . $this->BranchName . "</BranchName>\n" .
+		"    <SuccessURL>" . $this->SuccessURL . "</SuccessURL>\n" .
+		"    <ErrorURL>" . $this->ErrorURL . "</ErrorURL>\n" .
         "    <ContactInfo>\n" .
         "        <Country>" . $this->ContactInfo->Country . "</Country>\n" .
         "        <City>" . $this->ContactInfo->City . "</City>\n" .
