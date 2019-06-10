@@ -121,7 +121,11 @@
     $request->CardTokenization->CustomerId="01";
     $request->CardTokenization->ValidityPeriod="0";
     $request->CardTokenization->CCTokenId="";
-
+$request->CustomerInfo= new CustomerInfo();
+    $request->CustomerInfo->CustomerName="ahmet";
+    $request->CustomerInfo->CustomerSurname="yılmaz";
+    $request->CustomerInfo->CustomerEmail="ahmet.yilmaz@gmail.com";
+    $request->Language="TR";
     $response = CCProxySaleRequest::execute($request); // CCProxySale servisi başlatılması için gerekli servis çağırısını temsil eder.
     print "<h3>Sonuç:</h3>";
 	echo "<pre>";

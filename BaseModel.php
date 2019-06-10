@@ -90,3 +90,10 @@ class CardTokenization
     public $ValidityPeriod;
     public $CCTokenId;
 }
+
+class CustomerInfo
+{
+    public $CustomerName;
+    public $CustomerSurname;
+    public $CustomerEmail;
+}

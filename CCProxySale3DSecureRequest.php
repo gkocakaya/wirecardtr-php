@@ -11,6 +11,8 @@ class CCProxySale3DSecureRequest
     public  $OperationType; 
     public  $Token; 
     public  $CreditCardInfo; 
+    public  $CustomerInfo; 
+    public  $Language; 
     public  $MPAY; 
     public  $CurrencyCode; 
     public  $Port; 
@@ -53,6 +55,12 @@ class CCProxySale3DSecureRequest
         "        <ValidityPeriod>" . $this->CardTokenization->ValidityPeriod . "</ValidityPeriod>\n" .
         "        <CCTokenId>" . $this->CardTokenization->CCTokenId . "</CCTokenId>\n" .
         "    </CardTokenization>\n" .
+		        "    <CustomerInfo>\n" .
+        "        <CustomerName>" . $this->CustomerInfo->CustomerName . "</CustomerName>\n" .
+        "        <CustomerSurname>" . $this->CustomerInfo->CustomerSurname . "</CustomerSurname>\n" .
+        "        <CustomerEmail>" . $this->CustomerInfo->CustomerEmail . "</CustomerEmail>\n" .
+        "    </CustomerInfo>\n" .
+        "    <Language>" . $this->Language . "</Language>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
         "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
         "    <Port>" . $this->Port . "</Port>\n" . 

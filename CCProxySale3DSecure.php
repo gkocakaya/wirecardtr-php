@@ -123,6 +123,12 @@
     $request->CardTokenization->ValidityPeriod="0";
     $request->CardTokenization->CCTokenId="";
 
+	$request->CustomerInfo= new CustomerInfo();
+    $request->CustomerInfo->CustomerName="ahmet";
+    $request->CustomerInfo->CustomerSurname="yılmaz";
+    $request->CustomerInfo->CustomerEmail="ahmet.yilmaz@gmail.com";
+    $request->Language="TR";
+	
     $response = CCProxySale3DSecureRequest::execute($request); // CCProxySale3dSecure servisi başlatılması için gerekli servis çağırısını temsil eder.
     print "<h3>Sonuç:</h3>";
 	echo "<pre>";

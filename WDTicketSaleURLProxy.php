@@ -91,6 +91,11 @@ include('menu.php');
     $request->PaymentContent = "Bilgisayar";
     $request->Description = "BLGSYR01";
     $request->PaymentTypeId = 1;
+	$request->CustomerInfo= new CustomerInfo();
+    $request->CustomerInfo->CustomerName="ahmet";
+    $request->CustomerInfo->CustomerSurname="yılmaz";
+    $request->CustomerInfo->CustomerEmail="ahmet.yilmaz@gmail.com";
+    $request->Language="TR";
     $response = WDTicketPaymentFormRequest::execute($request); // WDTicketSaleURLProxy servisi başlatılması için gerekli servis çağırısını temsil eder.
    
     /**

@@ -21,6 +21,8 @@ class CCProxySaleRequest
     public  $CardTokenization; 
     public  $Port; 
     public  $BaseUrl; 
+	    public  $CustomerInfo; 
+    public  $Language; 
     public static function Execute(CCProxySaleRequest $request)
     {
         return  restHttpCaller::post($request->BaseUrl, $request->toXmlString());
@@ -51,6 +53,12 @@ class CCProxySaleRequest
         "        <ValidityPeriod>" . $this->CardTokenization->ValidityPeriod . "</ValidityPeriod>\n" .
         "        <CCTokenId>" . $this->CardTokenization->CCTokenId . "</CCTokenId>\n" .
         "    </CardTokenization>\n" .
+				        "    <CustomerInfo>\n" .
+        "        <CustomerName>" . $this->CustomerInfo->CustomerName . "</CustomerName>\n" .
+        "        <CustomerSurname>" . $this->CustomerInfo->CustomerSurname . "</CustomerSurname>\n" .
+        "        <CustomerEmail>" . $this->CustomerInfo->CustomerEmail . "</CustomerEmail>\n" .
+        "    </CustomerInfo>\n" .
+        "    <Language>" . $this->Language . "</Language>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
         "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
         "    <IPAddress>" . $this->IPAddress . "</IPAddress>\n" .

@@ -22,7 +22,8 @@ class WDTicketPaymentFormRequest
     public  $PaymentContent; 
     public  $PaymentTypeId; 
     public  $BaseUrl;
-
+	    public  $CustomerInfo; 
+    public  $Language; 
     public static function Execute(WDTicketPaymentFormRequest $request)
     {
         return  restHttpCaller::post($request->BaseUrl, $request->toXmlString());
@@ -39,6 +40,12 @@ class WDTicketPaymentFormRequest
         "    <UserCode>" .$this->Token->UserCode . "</UserCode>\n" .
         "    <Pin>" .$this->Token->Pin . "</Pin>\n" .
         "    </Token>\n" .
+						        "    <CustomerInfo>\n" .
+        "        <CustomerName>" . $this->CustomerInfo->CustomerName . "</CustomerName>\n" .
+        "        <CustomerSurname>" . $this->CustomerInfo->CustomerSurname . "</CustomerSurname>\n" .
+        "        <CustomerEmail>" . $this->CustomerInfo->CustomerEmail . "</CustomerEmail>\n" .
+        "    </CustomerInfo>\n" .
+        "    <Language>" . $this->Language . "</Language>\n" .
         "    <Price>" . $this->Price . "</Price>\n" .
         "    <MPAY>" . $this->MPAY . "</MPAY>\n" .
         "    <CurrencyCode>" . $this->CurrencyCode . "</CurrencyCode>\n" .
