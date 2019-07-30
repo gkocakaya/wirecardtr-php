@@ -49,7 +49,7 @@ class TokenizeCCRequest
         "    <Port>" . $this->Port . "</Port>\n" . 
         "</WIRECARD>";
         // echo $xml_data;
-         $xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
+         //$xml_data = iconv("UTF-8","ISO-8859-9", $xml_data);
          return $xml_data;
     }
 }
