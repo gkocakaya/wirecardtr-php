@@ -32,6 +32,7 @@ class restHttpCaller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $output = curl_exec($ch);
         curl_close($ch);
+	$output = iconv("UTF-8","ISO-8859-9", $output);
         return $output;
     }
 }
